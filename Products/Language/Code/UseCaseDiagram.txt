@@ -8,6 +8,6 @@ package Language {
   usecase "Translate" as Translate
 }
 
-Service --> Translate
+Service -- Translate
 
 @enduml
