@@ -1,4 +1,4 @@
-# ResumeMaker
-Documentation for ResumeMaker product.
+# Language
+Documentation for Language product.
 
-![ResumeMaker use case diagram](Images/UseCaseDiagram.png)
+![Language use case diagram](Images/UseCaseDiagram.png)

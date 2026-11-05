@@ -1,4 +1,4 @@
-# ResumeMaker
-Documentation for ResumeMaker product.
+# Authentication
+Documentation for Authentication product.
 
-![ResumeMaker use case diagram](Images/UseCaseDiagram.png)
+![Authentication use case diagram](Images/UseCaseDiagram.png)
