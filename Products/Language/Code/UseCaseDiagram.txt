@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+
+actor "Service" as Service
+
+package Language {
+  usecase "Translate" as Translate
+}
+
+Service --> Translate
+
+@enduml
