@@ -1,0 +1,54 @@
+@startuml
+
+left to right direction
+
+actor "User" as User
+
+package "Resume Maker" {
+  usecase "Move down entity" as MoveDownEntity
+  usecase "Move up entity" as MoveUpEntity
+  usecase "Delete entity" as DeleteEntity
+  usecase "Update entity" as UpdateEntity
+  usecase "Deselect entity" as DeselectEntity
+  usecase "Select entity" as SelectEntity
+  usecase "Show all entities" as ShowAllEntities
+  usecase "Create entity" as CreateEntity
+  usecase "Manage entity" as ManageEntity
+  usecase "Generate PDF" as GeneratePDF
+  usecase "Manage experience" as ManageExperience
+  usecase "Manage education" as ManageEducation
+  usecase "Manage skill" as ManageSkill
+  usecase "Manage resume" as ManageResume
+  usecase "Change password" as ChangePassword
+  usecase "Update account" as UpdateAccount
+  usecase "Log out" as LogOut
+  usecase "Reset password" as ResetPassword
+  usecase "Registration" as Registration
+  usecase "Log in" as LogIn
+}
+
+User --> ManageResume
+User --> ChangePassword
+User --> UpdateAccount
+User --> LogOut
+User --> ResetPassword
+User --> Registration
+User --> LogIn
+
+ManageResume <|-- ManageEntity
+ManageSkill <|-- ManageEntity
+ManageEducation <|-- ManageEntity
+ManageExperience <|-- ManageEntity
+
+ManageResume --> GeneratePDF
+
+ManageEntity <|-- MoveDownEntity
+ManageEntity <|-- MoveUpEntity
+ManageEntity <|-- DeleteEntity
+ManageEntity <|-- UpdateEntity
+ManageEntity <|-- DeselectEntity
+ManageEntity <|-- SelectEntity
+ManageEntity <|-- ShowAllEntities
+ManageEntity <|-- CreateEntity
+
+@enduml
