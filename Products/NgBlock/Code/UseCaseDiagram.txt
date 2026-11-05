@@ -1,0 +1,27 @@
+@startuml
+
+left to right direction
+
+actor "Angular" as Angular
+
+package NgBlock {
+  usecase "Control" as Control
+  usecase "Data" as Data
+  usecase "Form" as Form
+  usecase "Layout" as Layout
+  usecase "Menu" as Menu
+  usecase "Message" as Message
+  usecase "Overlay" as Overlay
+  usecase "Style" as Style
+}
+
+Angular --> Control
+Angular --> Data
+Angular --> Form
+Angular --> Layout
+Angular --> Menu
+Angular --> Message
+Angular --> Overlay
+Angular --> Style
+
+@enduml
