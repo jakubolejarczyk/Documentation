@@ -9,41 +9,37 @@ package "Resume Maker" {
   usecase "Move up entity" as MoveUpEntity
   usecase "Delete entity" as DeleteEntity
   usecase "Update entity" as UpdateEntity
-  usecase "Deselect entity" as DeselectEntity
-  usecase "Select entity" as SelectEntity
-  usecase "Show all entities" as ShowAllEntities
+  usecase "Show entities" as ShowEntities
   usecase "Create entity" as CreateEntity
   usecase "Manage entity" as ManageEntity
-  usecase "Generate PDF" as GeneratePDF
+  usecase "Generate PDF resume" as GeneratePDFResume
+  usecase "Deselect resume" as DeselectResume
+  usecase "Select resume" as SelectResume
   usecase "Manage experience" as ManageExperience
   usecase "Manage education" as ManageEducation
   usecase "Manage skill" as ManageSkill
   usecase "Manage resume" as ManageResume
-  usecase "Change password" as ChangePassword
-  usecase "Update account" as UpdateAccount
 }
 
-User --> ManageExperience
-User --> ManageEducation
-User --> ManageSkill
-User --> ManageResume
-User --> ChangePassword
-User --> UpdateAccount
+User -- ManageExperience
+User -- ManageEducation
+User -- ManageSkill
+User -- ManageResume
 
-ManageResume <|-- ManageEntity
-ManageSkill <|-- ManageEntity
-ManageEducation <|-- ManageEntity
-ManageExperience <|-- ManageEntity
+ManageResume ..> GeneratePDFResume : <<Include>>
+ManageResume ..> DeselectResume : <<Include>>
+ManageResume ..> SelectResume : <<Include>>
 
-ManageResume --> GeneratePDF
+ManageResume ..> ManageEntity : <<Include>>
+ManageSkill ..> ManageEntity : <<Include>>
+ManageEducation ..> ManageEntity : <<Include>>
+ManageExperience ..> ManageEntity : <<Include>>
 
-ManageEntity <|-- MoveDownEntity
-ManageEntity <|-- MoveUpEntity
-ManageEntity <|-- DeleteEntity
-ManageEntity <|-- UpdateEntity
-ManageEntity <|-- DeselectEntity
-ManageEntity <|-- SelectEntity
-ManageEntity <|-- ShowAllEntities
-ManageEntity <|-- CreateEntity
+ManageEntity ..> MoveDownEntity : <<Include>>
+ManageEntity ..> MoveUpEntity : <<Include>>
+ManageEntity ..> DeleteEntity : <<Include>>
+ManageEntity ..> UpdateEntity : <<Include>>
+ManageEntity ..> ShowEntities : <<Include>>
+ManageEntity ..> CreateEntity : <<Include>>
 
 @enduml
