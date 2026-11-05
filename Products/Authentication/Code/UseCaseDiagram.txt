@@ -9,11 +9,13 @@ package Authentication {
   usecase "Registration" as Registration
   usecase "Reset password" as ResetPassword
   usecase "Log out" as LogOut
+  usecase "Check authentication" as CheckAthentication
 }
 
 Service --> Login
 Service --> Registration
 Service --> ResetPassword
 Service --> LogOut
+Service --> CheckAthentication
 
 @enduml
