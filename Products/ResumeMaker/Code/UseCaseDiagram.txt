@@ -26,20 +26,20 @@ User -- ManageEducation
 User -- ManageSkill
 User -- ManageResume
 
-ManageResume ..> GeneratePDFResume : <<Include>>
-ManageResume ..> DeselectResume : <<Include>>
-ManageResume ..> SelectResume : <<Include>>
+ManageResume <.. GeneratePDFResume : <<Extend>>
+ManageResume <.. DeselectResume : <<Extend>>
+ManageResume <.. SelectResume : <<Extend>>
 
-ManageResume ..> ManageEntity : <<Include>>
-ManageSkill ..> ManageEntity : <<Include>>
-ManageEducation ..> ManageEntity : <<Include>>
-ManageExperience ..> ManageEntity : <<Include>>
+ManageResume --|> ManageEntity
+ManageSkill --|> ManageEntity
+ManageEducation --|> ManageEntity
+ManageExperience --|> ManageEntity
 
-ManageEntity ..> MoveDownEntity : <<Include>>
-ManageEntity ..> MoveUpEntity : <<Include>>
-ManageEntity ..> DeleteEntity : <<Include>>
-ManageEntity ..> UpdateEntity : <<Include>>
-ManageEntity ..> ShowEntities : <<Include>>
-ManageEntity ..> CreateEntity : <<Include>>
+ManageEntity <.. MoveDownEntity : <<Extend>>
+ManageEntity <.. MoveUpEntity : <<Extend>>
+ManageEntity <.. DeleteEntity : <<Extend>>
+ManageEntity <.. UpdateEntity : <<Extend>>
+ManageEntity <.. ShowEntities : <<Extend>>
+ManageEntity <.. CreateEntity : <<Extend>>
 
 @enduml
