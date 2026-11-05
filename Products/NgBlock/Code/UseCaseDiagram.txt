@@ -15,13 +15,13 @@ package NgBlock {
   usecase "Style" as Style
 }
 
-Angular --> Control
-Angular --> Data
-Angular --> Form
-Angular --> Layout
-Angular --> Menu
-Angular --> Message
-Angular --> Overlay
-Angular --> Style
+Angular -- Control
+Angular -- Data
+Angular -- Form
+Angular -- Layout
+Angular -- Menu
+Angular -- Message
+Angular -- Overlay
+Angular -- Style
 
 @enduml
