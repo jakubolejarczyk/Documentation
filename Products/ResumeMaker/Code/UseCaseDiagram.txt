@@ -21,19 +21,11 @@ package "Resume Maker" {
   usecase "Manage resume" as ManageResume
   usecase "Change password" as ChangePassword
   usecase "Update account" as UpdateAccount
-  usecase "Log out" as LogOut
-  usecase "Reset password" as ResetPassword
-  usecase "Registration" as Registration
-  usecase "Log in" as LogIn
 }
 
 User --> ManageResume
 User --> ChangePassword
 User --> UpdateAccount
-User --> LogOut
-User --> ResetPassword
-User --> Registration
-User --> LogIn
 
 ManageResume <|-- ManageEntity
 ManageSkill <|-- ManageEntity
