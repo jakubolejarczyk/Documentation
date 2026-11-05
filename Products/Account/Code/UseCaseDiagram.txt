@@ -1,0 +1,27 @@
+@startuml
+
+left to right direction
+
+actor "Service" as Service
+
+package Account {
+  usecase "Sign in" as SignIn
+  usecase "Sign up" as SignUp
+  usecase "Reset password" as ResetPassword
+  usecase "Log out" as LogOut
+  usecase "Check authentication" as CheckAuthentication
+  usecase "Update account details" as UpdateAccountDetails
+  usecase "Update email" as UpdateEmail
+  usecase "Update password" as UpdatePassword
+}
+
+Service -- SignIn
+Service -- SignUp
+Service -- ResetPassword
+Service -- LogOut
+Service -- CheckAuthentication
+Service -- UpdateAccountDetails
+Service -- UpdateEmail
+Service -- UpdatePassword
+
+@enduml
