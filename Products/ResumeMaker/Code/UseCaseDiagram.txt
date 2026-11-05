@@ -23,6 +23,9 @@ package "Resume Maker" {
   usecase "Update account" as UpdateAccount
 }
 
+User --> ManageExperience
+User --> ManageEducation
+User --> ManageSkill
 User --> ManageResume
 User --> ChangePassword
 User --> UpdateAccount
