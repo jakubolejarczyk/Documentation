@@ -1,0 +1,23 @@
+@startuml
+
+left to right direction
+
+package Products {
+  component "Account" as Account
+  component "Language" as Language
+  component "NgBlock" as NgBlock
+  component "ResumeMaker" as ResumeMaker
+
+  interface "Component" as Component
+  interface "Translate" as Translate
+  interface "User" as User
+
+  Language - Translate
+  ResumeMaker --( Translate
+  NgBlock - Component
+  ResumeMaker --( Component
+  Account - User
+  ResumeMaker --( User
+}
+
+@enduml
